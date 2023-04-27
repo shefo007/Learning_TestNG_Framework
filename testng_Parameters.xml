@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parameters Suite">
+    <parameter name="URL" value="https://opensource-demo.orangehrmlive.com/"/>
+    <parameter name="browser" value="chrome"/>
+<!--    <parameter name="browser" value="firefox"/>-->
+
+    <test name="Pass Parameters Test">
+        <parameter name="Username" value="Admin"/>
+        <parameter name="Password" value="admin123"/>
+        <classes>
+            <class name="Parameterization.ParameterizedTest"/>
+        </classes>
+    </test>
+
+    <test name="Fail Parameters Test">
+        <parameter name="Username" value="Admin"/>
+        <parameter name="Password" value="admin"/>
+        <classes>
+            <class name="Parameterization.ParameterizedTest"/>
+        </classes>
+    </test>
+    
+</suite>
