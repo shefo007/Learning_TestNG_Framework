@@ -20,7 +20,6 @@ public class IgnoreDemo {
     }
 
     @Ignore
-
     @Test(priority = 3)
     public void ThirdTest() {
 
